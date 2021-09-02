@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+
+  <body>
+    <h1>Tic Tac Toe</h1>
+
+    <div class="game-container">
+      <div class="player-info">
+        <input
+          type="text"
+          class="player-names editing"
+          id="player1"
+          value="Player 1"
+          maxlength="12"
+        />
+        <div><small>Wins: </small><small id="p1wins">0</small></div>
+        <div class="radio-container">
+          <small>Play with: </small>
+          <div>
+            <label for="X-1">X</label>
+            <input
+              type="radio"
+              name="player1-mark"
+              id="X1"
+              value="X1"
+              checked
+            />
+          </div>
+          <div>
+            <label for="0-1">O</label>
+            <input type="radio" name="player1-mark" id="O1" value="01" />
+          </div>
+        </div>
+        <div class="turn-container">
+          Turn:
+          <i
+            class="fas fa-2x fa-play-circle green"
+            id="turnindicator"
+            data-type="player1Go"
+          ></i
+          ><i
+            class="fas fa-2x fa-hand-paper red invisible"
+            id="turnindicator"
+            data-type="player1NoGo"
+          ></i>
+        </div>
+      </div>
+      <div class="board-container">
+        <div class="board-square square-left" data-index="0"></div>
+        <div class="board-square" data-index="1"></div>
+        <div class="board-square square-right" data-index="2"></div>
+        <div
+          class="board-square square-left square-middle"
+          data-index="3"
+        ></div>
+        <div class="board-square square-middle" data-index="4"></div>
+        <div
+          class="board-square square-right square-middle"
+          data-index="5"
+        ></div>
+        <div class="board-square square-left" data-index="6"></div>
+        <div class="board-square" data-index="7"></div>
+        <div class="board-square square-right" data-index="8"></div>
+      </div>
+      <div class="player-info">
+        <input
+          type="text"
+          class="player-names editing"
+          id="player1"
+          value="Player 2"
+          maxlength="12"
+        />
+        <div><small>Wins: </small><small id="p2wins">0</small></div>
+
+        <div class="radio-container">
+          <small>Play with: </small>
+          <div>
+            <label for="X-2">X</label>
+            <input type="radio" name="player2-mark" id="X2" value="X2" />
+          </div>
+          <div>
+            <label for="0-2">O</label>
+            <input
+              type="radio"
+              name="player2-mark"
+              id="O2"
+              value="02"
+              checked
+            />
+          </div>
+        </div>
+        <div class="turn-container">
+          Turn:
+          <i
+            class="fas fa-2x fa-play-circle green invisible"
+            id="turnindicator"
+            data-type="player2Go"
+          ></i
+          ><i
+            class="fas fa-2x fa-hand-paper red"
+            id="turnindicator"
+            data-type="player2NoGo"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <button class="start-button" id="startbtn">START GAME</button>
+    <script src="script.js"></script>
+  </body>
+</html>
